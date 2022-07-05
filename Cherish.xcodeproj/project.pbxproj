@@ -1,0 +1,594 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F33D8B352874F9AE0093D662 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33D8B342874F9AE0093D662 /* AppDelegate.swift */; };
+		F33D8B372874F9AF0093D662 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F33D8B362874F9AF0093D662 /* Assets.xcassets */; };
+		F33D8B3A2874F9AF0093D662 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F33D8B382874F9AF0093D662 /* MainMenu.xib */; };
+		F33D8B452874F9AF0093D662 /* CherishTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33D8B442874F9AF0093D662 /* CherishTests.swift */; };
+		F33D8B4F2874F9AF0093D662 /* CherishUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33D8B4E2874F9AF0093D662 /* CherishUITests.swift */; };
+		F33D8B512874F9AF0093D662 /* CherishUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33D8B502874F9AF0093D662 /* CherishUITestsLaunchTests.swift */; };
+		F33D8B5F2874FA8D0093D662 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33D8B5E2874FA8D0093D662 /* Logger.swift */; };
+		F33D8B612874FAA70093D662 /* ShareController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33D8B602874FAA70093D662 /* ShareController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F33D8B412874F9AF0093D662 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F33D8B292874F9AE0093D662 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F33D8B302874F9AE0093D662;
+			remoteInfo = Cherish;
+		};
+		F33D8B4B2874F9AF0093D662 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F33D8B292874F9AE0093D662 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F33D8B302874F9AE0093D662;
+			remoteInfo = Cherish;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F33D8B312874F9AE0093D662 /* Cherish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cherish.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F33D8B342874F9AE0093D662 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F33D8B362874F9AF0093D662 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F33D8B392874F9AF0093D662 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		F33D8B3B2874F9AF0093D662 /* Cherish.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Cherish.entitlements; sourceTree = "<group>"; };
+		F33D8B402874F9AF0093D662 /* CherishTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CherishTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F33D8B442874F9AF0093D662 /* CherishTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CherishTests.swift; sourceTree = "<group>"; };
+		F33D8B4A2874F9AF0093D662 /* CherishUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CherishUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F33D8B4E2874F9AF0093D662 /* CherishUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CherishUITests.swift; sourceTree = "<group>"; };
+		F33D8B502874F9AF0093D662 /* CherishUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CherishUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F33D8B5D2874FA1B0093D662 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F33D8B5E2874FA8D0093D662 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		F33D8B602874FAA70093D662 /* ShareController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F33D8B2E2874F9AE0093D662 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F33D8B3D2874F9AF0093D662 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F33D8B472874F9AF0093D662 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F33D8B282874F9AE0093D662 = {
+			isa = PBXGroup;
+			children = (
+				F33D8B332874F9AE0093D662 /* Cherish */,
+				F33D8B432874F9AF0093D662 /* CherishTests */,
+				F33D8B4D2874F9AF0093D662 /* CherishUITests */,
+				F33D8B322874F9AE0093D662 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F33D8B322874F9AE0093D662 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F33D8B312874F9AE0093D662 /* Cherish.app */,
+				F33D8B402874F9AF0093D662 /* CherishTests.xctest */,
+				F33D8B4A2874F9AF0093D662 /* CherishUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F33D8B332874F9AE0093D662 /* Cherish */ = {
+			isa = PBXGroup;
+			children = (
+				F33D8B5D2874FA1B0093D662 /* Info.plist */,
+				F33D8B342874F9AE0093D662 /* AppDelegate.swift */,
+				F33D8B5E2874FA8D0093D662 /* Logger.swift */,
+				F33D8B602874FAA70093D662 /* ShareController.swift */,
+				F33D8B362874F9AF0093D662 /* Assets.xcassets */,
+				F33D8B382874F9AF0093D662 /* MainMenu.xib */,
+				F33D8B3B2874F9AF0093D662 /* Cherish.entitlements */,
+			);
+			path = Cherish;
+			sourceTree = "<group>";
+		};
+		F33D8B432874F9AF0093D662 /* CherishTests */ = {
+			isa = PBXGroup;
+			children = (
+				F33D8B442874F9AF0093D662 /* CherishTests.swift */,
+			);
+			path = CherishTests;
+			sourceTree = "<group>";
+		};
+		F33D8B4D2874F9AF0093D662 /* CherishUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F33D8B4E2874F9AF0093D662 /* CherishUITests.swift */,
+				F33D8B502874F9AF0093D662 /* CherishUITestsLaunchTests.swift */,
+			);
+			path = CherishUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F33D8B302874F9AE0093D662 /* Cherish */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F33D8B542874F9AF0093D662 /* Build configuration list for PBXNativeTarget "Cherish" */;
+			buildPhases = (
+				F33D8B2D2874F9AE0093D662 /* Sources */,
+				F33D8B2E2874F9AE0093D662 /* Frameworks */,
+				F33D8B2F2874F9AE0093D662 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Cherish;
+			productName = Cherish;
+			productReference = F33D8B312874F9AE0093D662 /* Cherish.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F33D8B3F2874F9AF0093D662 /* CherishTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F33D8B572874F9AF0093D662 /* Build configuration list for PBXNativeTarget "CherishTests" */;
+			buildPhases = (
+				F33D8B3C2874F9AF0093D662 /* Sources */,
+				F33D8B3D2874F9AF0093D662 /* Frameworks */,
+				F33D8B3E2874F9AF0093D662 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F33D8B422874F9AF0093D662 /* PBXTargetDependency */,
+			);
+			name = CherishTests;
+			productName = CherishTests;
+			productReference = F33D8B402874F9AF0093D662 /* CherishTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F33D8B492874F9AF0093D662 /* CherishUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F33D8B5A2874F9AF0093D662 /* Build configuration list for PBXNativeTarget "CherishUITests" */;
+			buildPhases = (
+				F33D8B462874F9AF0093D662 /* Sources */,
+				F33D8B472874F9AF0093D662 /* Frameworks */,
+				F33D8B482874F9AF0093D662 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F33D8B4C2874F9AF0093D662 /* PBXTargetDependency */,
+			);
+			name = CherishUITests;
+			productName = CherishUITests;
+			productReference = F33D8B4A2874F9AF0093D662 /* CherishUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F33D8B292874F9AE0093D662 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					F33D8B302874F9AE0093D662 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					F33D8B3F2874F9AF0093D662 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = F33D8B302874F9AE0093D662;
+					};
+					F33D8B492874F9AF0093D662 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = F33D8B302874F9AE0093D662;
+					};
+				};
+			};
+			buildConfigurationList = F33D8B2C2874F9AE0093D662 /* Build configuration list for PBXProject "Cherish" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F33D8B282874F9AE0093D662;
+			productRefGroup = F33D8B322874F9AE0093D662 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F33D8B302874F9AE0093D662 /* Cherish */,
+				F33D8B3F2874F9AF0093D662 /* CherishTests */,
+				F33D8B492874F9AF0093D662 /* CherishUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F33D8B2F2874F9AE0093D662 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F33D8B372874F9AF0093D662 /* Assets.xcassets in Resources */,
+				F33D8B3A2874F9AF0093D662 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F33D8B3E2874F9AF0093D662 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F33D8B482874F9AF0093D662 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F33D8B2D2874F9AE0093D662 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F33D8B612874FAA70093D662 /* ShareController.swift in Sources */,
+				F33D8B352874F9AE0093D662 /* AppDelegate.swift in Sources */,
+				F33D8B5F2874FA8D0093D662 /* Logger.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F33D8B3C2874F9AF0093D662 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F33D8B452874F9AF0093D662 /* CherishTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F33D8B462874F9AF0093D662 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F33D8B4F2874F9AF0093D662 /* CherishUITests.swift in Sources */,
+				F33D8B512874F9AF0093D662 /* CherishUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F33D8B422874F9AF0093D662 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F33D8B302874F9AE0093D662 /* Cherish */;
+			targetProxy = F33D8B412874F9AF0093D662 /* PBXContainerItemProxy */;
+		};
+		F33D8B4C2874F9AF0093D662 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F33D8B302874F9AE0093D662 /* Cherish */;
+			targetProxy = F33D8B4B2874F9AF0093D662 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F33D8B382874F9AF0093D662 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F33D8B392874F9AF0093D662 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F33D8B522874F9AF0093D662 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F33D8B532874F9AF0093D662 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		F33D8B552874F9AF0093D662 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = Cherish/Cherish.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B427SV8LA5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Cherish/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainNibFile = MainMenu;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vyrtsev.mac.Cherish.debug;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F33D8B562874F9AF0093D662 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = Cherish/Cherish.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B427SV8LA5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Cherish/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainNibFile = MainMenu;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vyrtsev.mac.Cherish;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		F33D8B582874F9AF0093D662 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B427SV8LA5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vyrtsev.mac.CherishTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cherish.app/Contents/MacOS/Cherish";
+			};
+			name = Debug;
+		};
+		F33D8B592874F9AF0093D662 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B427SV8LA5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vyrtsev.mac.CherishTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cherish.app/Contents/MacOS/Cherish";
+			};
+			name = Release;
+		};
+		F33D8B5B2874F9AF0093D662 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B427SV8LA5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vyrtsev.mac.CherishUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Cherish;
+			};
+			name = Debug;
+		};
+		F33D8B5C2874F9AF0093D662 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B427SV8LA5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vyrtsev.mac.CherishUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Cherish;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F33D8B2C2874F9AE0093D662 /* Build configuration list for PBXProject "Cherish" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F33D8B522874F9AF0093D662 /* Debug */,
+				F33D8B532874F9AF0093D662 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F33D8B542874F9AF0093D662 /* Build configuration list for PBXNativeTarget "Cherish" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F33D8B552874F9AF0093D662 /* Debug */,
+				F33D8B562874F9AF0093D662 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F33D8B572874F9AF0093D662 /* Build configuration list for PBXNativeTarget "CherishTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F33D8B582874F9AF0093D662 /* Debug */,
+				F33D8B592874F9AF0093D662 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F33D8B5A2874F9AF0093D662 /* Build configuration list for PBXNativeTarget "CherishUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F33D8B5B2874F9AF0093D662 /* Debug */,
+				F33D8B5C2874F9AF0093D662 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F33D8B292874F9AE0093D662 /* Project object */;
+}
