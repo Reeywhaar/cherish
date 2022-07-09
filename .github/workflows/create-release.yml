@@ -1,0 +1,55 @@
+name: "Release"
+on:
+  push:
+    tags:
+      - "*.*"
+
+jobs:
+  release:
+    name: "Release"
+    runs-on: macos-12
+    steps:
+      - name: "Checkout"
+        uses: actions/checkout@v1
+
+      - name: "Configure certificates"
+        run: >
+          echo $DISTRIBUTION_CERT_BASE_64 | base64 --decode > cert.p12 &&
+          security create-keychain -p $KEYCHAIN_PASS $KEYCHAIN &&
+          security default-keychain -s ~/Library/Keychains/$KEYCHAIN-db &&
+          security set-keychain-settings $KEYCHAIN &&
+          security list-keychains -s $KEYCHAIN &&
+          security list-keychains &&
+          security unlock-keychain -p $KEYCHAIN_PASS $KEYCHAIN &&
+          security import ./cert.p12 -k $KEYCHAIN -P $DISTRIBUTION_CERT_PASS -A -T /usr/bin/codesign -T /usr/bin/security &&
+          security set-key-partition-list -S apple-tool:,apple: -s -k $KEYCHAIN_PASS $KEYCHAIN &&
+          security find-identity -p codesigning -v
+        env:
+          KEYCHAIN: "def.keychain"
+          KEYCHAIN_PASS: "hmmmm"
+          DISTRIBUTION_CERT_BASE_64: ${{ secrets.DISTRIBUTION_CERT_BASE_64 }}
+          DISTRIBUTION_CERT_PASS: ${{ secrets.DISTRIBUTION_CERT_PASS }}
+
+      - name: "Configure notarytool"
+        run: >
+          xcrun notarytool store-credentials notarytool --apple-id $APPLE_ID --team-id $TEAM_ID --password $NOTARY_TOOL_PASS
+        env:
+          APPLE_ID: ${{ secrets.APPLE_ID }}
+          NOTARY_TOOL_PASS: ${{ secrets.NOTARY_TOOL_PASS }}
+          TEAM_ID: ${{ secrets.TEAM_ID }}
+
+      - name: "Archive"
+        run: xcodebuild -project Cherish.xcodeproj -scheme Cherish -configuration Release archive -archivePath cherish.xcarchive
+
+      - name: "Zip App"
+        run: pushd cherish.xcarchive/Products/Applications && zip --symlinks -r ../../../Cherish.zip Cherish.app && popd
+
+      - name: "Notarize app"
+        run: xcrun notarytool submit Cherish.zip --keychain-profile notarytool --wait
+
+      - name: "Create Release"
+        uses: softprops/action-gh-release@78c309ef59fdb9557cd6574f2e0be552936ed728
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          files: Cherish.zip
