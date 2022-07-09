@@ -18,7 +18,7 @@ class ShareController: NSObject, NSSharingServiceDelegate {
         }
 
         if !service.canPerform(withItems: items) {
-            AppLogger.error("Can't perform: file is likely to be nonexistent.")
+            AppLogger.error("Can't perform sharing with given items")
             return
         }
         

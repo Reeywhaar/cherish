@@ -14,7 +14,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var filenames: [String] = []
     weak var timer: Timer?
     
-
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         NSApplication.shared.servicesProvider = self
         
@@ -50,22 +49,35 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2, execute: processFiles)
     }
     
-    func processFiles() {
+    @objc
+    func doString(_ pboard: NSPasteboard, userData: String, error: NSErrorPointer) {
+        let strs = pboard.readObjects(forClasses: [NSAttributedString.self, NSURL.self]) ?? []
+        let items = strs.compactMap { str -> URL? in
+            if let str = str as? NSAttributedString {
+                for attr in str.attributes(at: 0, effectiveRange: nil) {
+                    if attr.key != .link { continue }
+                    if let url = attr.value as? URL { return url }
+                    if let linkstr = attr.value as? String,
+                       let url = URL(string: linkstr ) { return url }
+                }
+                
+                if let url = URL(string: str.string) { return url }
+                return toDataUrl(string: str.string)
+            }
+            
+            if let url = str as? NSURL { return url as URL }
+            
+            return nil
+        }
+     
+        shareController.share(items)
+    }
+    
+    private func processFiles() {
         if filenames.isEmpty { return }
         AppLogger.info("Share \(self.filenames.count) files")
         shareController.share(filenames.map{ URL(fileURLWithPath: $0) })
         filenames.removeAll()
-    }
-    
-    
-    @objc
-    func doString(_ pboard: NSPasteboard, userData: String, error: NSErrorPointer) {
-        let items = pboard.pasteboardItems?.compactMap { item -> Any? in
-            guard let string = item.string(forType: NSPasteboard.PasteboardType.string) else { return nil }
-            if let url = URL(string: string) { return url }
-            return toDataUrl(string: string)
-        }
-        shareController.share(items)
     }
     
     private func toDataUrl(string: String) -> URL {
