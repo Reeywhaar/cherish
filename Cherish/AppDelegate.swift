@@ -11,8 +11,9 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet var window: NSWindow!
     private var shareController = ShareController()
-    var filenames: [String] = []
+    var urls: [URL] = []
     weak var timer: Timer?
+    weak var execTimer: Timer?
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         NSApplication.shared.servicesProvider = self
@@ -39,45 +40,41 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     func application(_ sender: NSApplication, openFile filename: String) -> Bool {
-        filenames.append(filename)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2, execute: processFiles)
+        addToQueue([filename].map{ URL(fileURLWithPath: $0) })
         return true
     }
         
     func application(_ sender: NSApplication, openFiles filenames: [String]) {
-        self.filenames.append(contentsOf: filenames)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2, execute: processFiles)
+        addToQueue(filenames.map{ URL(fileURLWithPath: $0) })
+    }
+    
+    func application(_ application: NSApplication, open urls: [URL]) {
+        addToQueue(urls)
     }
     
     @objc
     func doString(_ pboard: NSPasteboard, userData: String, error: NSErrorPointer) {
-        let strs = pboard.readObjects(forClasses: [NSAttributedString.self, NSURL.self]) ?? []
-        let items = strs.compactMap { str -> URL? in
-            if let str = str as? NSAttributedString {
-                for attr in str.attributes(at: 0, effectiveRange: nil) {
-                    if attr.key != .link { continue }
-                    if let url = attr.value as? URL { return url }
-                    if let linkstr = attr.value as? String,
-                       let url = URL(string: linkstr ) { return url }
-                }
-                
-                if let url = URL(string: str.string) { return url }
-                return toDataUrl(string: str.string)
-            }
-            
-            if let url = str as? NSURL { return url as URL }
-            
-            return nil
+        let items = pboard.pasteboardItems?.compactMap { item -> Any? in
+            guard let string = item.string(forType: .string) else { return nil }
+            return toDataUrl(string: string)
         }
      
         shareController.share(items)
     }
     
+    private func addToQueue(_ urls: [URL]) {
+        self.urls.append(contentsOf: urls)
+        execTimer?.invalidate()
+        self.execTimer = Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false) { [weak self] timer in
+            self?.processFiles()
+        }
+    }
+    
     private func processFiles() {
-        if filenames.isEmpty { return }
-        AppLogger.info("Share \(self.filenames.count) files")
-        shareController.share(filenames.map{ URL(fileURLWithPath: $0) })
-        filenames.removeAll()
+        if urls.isEmpty { return }
+        AppLogger.info("Share \(self.urls.count) items")
+        shareController.share(urls)
+        urls.removeAll()
     }
     
     private func toDataUrl(string: String) -> URL {
